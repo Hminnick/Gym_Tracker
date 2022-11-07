@@ -34,29 +34,17 @@
     </div>
 
     <div class="container shadow bg-body rounded mt-5 p-5 bg-opacity-25">
-        <div class="d-flex justify-content-between py-3 px-3 mb-5 shadow-sm bg-light rounded"> <!-- header, user name and profile picture -->
-            <h1>Welcome {{user.first_name}}</h1><!--why isnt this working?-->
-
-            <p>user pic</p><!--temporary,https://stackoverflow.com/questions/44926465/upload-image-in-flask -->
-
+        <div class="d-flex justify-content-center py-3 px-3 mb-5 shadow-sm bg-light rounded"> <!-- header, user name and profile picture -->
+            <h1>Welcome {{user.first_name}}</h1>
         </div>
-
-        <div class="container d-flex">
+        <div class="container d-flex"><!--columns container, below header-->
             <div class="container me-5"> <!-- left column container -->
-                <div class="container shadow-sm p-3 mb-2 bg-light rounded"> <!-- left column upper, user info -->
-                    <p>{{user.description}}</p>
-                    <p>hello</p>
-                    <a href="/profile/edit/{{user.id}}">Edit Profile</a><!-- need to make an edit profile page -->
+                <div class="container shadow-sm p-3 bg-light rounded"> <!-- left column, calorie calculator, users last calculated amount -->
 
-                </div>
-
-                <div class="container shadow-sm p-3 bg-light rounded"> <!-- left column lower, calorie calculator, users last calculated amount -->
-
-                    <a class="btn btn-warning" href="/calculator/{{user.id}}">Calculate Calories</a>
+                    <a class="btn btn-warning" href="/calculator/{{user.id}}">Calculate Calories</a><!--change button function-->
 
                 </div>
             </div>
-
             <div class="container ms-5 shadow-sm p-3 flex-basis bg-light rounded"> <!-- right column container, post wall -->
                 <a class="btn btn-warning mb-2" href="/logs/add">Add a log</a>
                 <div>
